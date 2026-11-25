@@ -56,4 +56,4 @@
 
 ## 📬 Contact
 
-For licensing, inquiries, or authorized access: **sobhanganji@gmail.com**
+For licensing, inquiries, or authorized access: **Sobhan.Ganji@Yahoo.Com**
