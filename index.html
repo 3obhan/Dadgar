@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        // 1. Gracefully ignore HMR WebSocket disconnects in preview iframe per environment constraints
+        window.addEventListener('unhandledrejection', function(event) {
+          var reason = event && event.reason;
+          var msg = reason ? (reason.message || String(reason)) : '';
+          if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1 || msg.indexOf('ws:') !== -1) {
+            event.preventDefault();
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+            if (event.stopPropagation) event.stopPropagation();
+          }
+        }, true);
+
+        window.addEventListener('error', function(event) {
+          var msg = event && (event.message || '');
+          var file = event && (event.filename || '');
+          if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1 || (file && file.indexOf('@vite/client') !== -1)) {
+            event.preventDefault();
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+            if (event.stopPropagation) event.stopPropagation();
+          }
+        }, true);
+
+        // 2. Intercept vite-hmr WebSocket so @vite/client never rejects with 'WebSocket closed without opened'
+        if (typeof window !== 'undefined' && window.WebSocket && typeof Proxy !== 'undefined') {
+          try {
+            var RealWS = window.WebSocket;
+            window.WebSocket = new Proxy(RealWS, {
+              construct: function(target, args, newTarget) {
+                var url = args[0];
+                var protocols = args[1];
+                var isVite = protocols === 'vite-hmr' || protocols === 'vite-ping' ||
+                  (Array.isArray(protocols) && (protocols.indexOf('vite-hmr') !== -1 || protocols.indexOf('vite-ping') !== -1)) ||
+                  (typeof url === 'string' && (url.indexOf('token=') !== -1 || url.indexOf('24678') !== -1 || url.indexOf('vite') !== -1));
+                if (isVite) {
+                  var listeners = {};
+                  return {
+                    url: String(url || ''),
+                    protocols: protocols,
+                    readyState: 1, // OPEN
+                    OPEN: 1,
+                    CONNECTING: 0,
+                    CLOSING: 2,
+                    CLOSED: 3,
+                    send: function() {},
+                    close: function() {},
+                    addEventListener: function(event, fn) {
+                      if (!listeners[event]) listeners[event] = [];
+                      listeners[event].push(fn);
+                      if (event === 'open') {
+                        setTimeout(function() {
+                          try { fn({ type: 'open' }); } catch (_) {}
+                        }, 0);
+                      }
+                    },
+                    removeEventListener: function(event, fn) {
+                      if (listeners[event]) {
+                        listeners[event] = listeners[event].filter(function(f) { return f !== fn; });
+                      }
+                    },
+                    dispatchEvent: function() { return true; }
+                  };
+                }
+                return Reflect.construct(target, args, newTarget);
+              }
+            });
+          } catch (_) {}
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>جناب قاضی</title>
+    <meta name="description" content="سامانهٔ داوری هوشمند اختلافات بر پایه منطق محض و واقعیات جهان با پشتیبانی از فایل صوتی" />
+    <meta property="og:title" content="جناب قاضی" />
+    <meta property="og:description" content="سامانه قضاوت و داوری هوشمند اختلافات بر پایه منطق محض و واقعیات جهان با پشتیبانی از فایل صوتی" />
+  </head>
+  <body class="bg-white text-[#111111] font-sans antialiased selection:bg-[#FFC400]/40 selection:text-[#111111]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

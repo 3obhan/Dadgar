@@ -1,0 +1,24 @@
+{
+  "appId": "dev.sobhan_ganji.mrjudge",
+  "appName": "آقای قاضی",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "http://mrjudge.sobhan-ganji.workers.dev",
+    "cleartext": true,
+    "allowNavigation": [
+      "mrjudge.sobhan-ganji.workers.dev",
+      "*.stripe.com",
+      "*.paypal.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "ios": {
+    "allowsLinkPreview": false,
+    "scrollEnabled": true
+  }
+}

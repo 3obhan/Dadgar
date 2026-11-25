@@ -1,0 +1,16 @@
+{
+  "name": "جناب قاضی",
+  "description": "سامانه داوری هوشمند اختلافات بر پایه منطق محض و واقعیات جهان با پشتیبانی از فایل صوتی",
+  "permissions": [
+    "microphone"
+  ],
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

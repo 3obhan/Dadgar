@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 250 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,7.5,5)">
+        <path d="M2,92L54,116L54,198L2,174L2,92Z" style="fill:rgb(255,196,0);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,5.5,5)">
+        <path d="M62,116L114,92L114,174L62,198L62,116Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-3.5,-1)">
+        <path d="M122,4L180,30L180,112L122,86L122,4Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-2.5,5)">
+        <path d="M122,182L180,208L180,290L122,264L122,182Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-5.5,-2)">
+        <path d="M188,33L246,59L246,141L188,115L188,33Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-5.5,-2)">
+        <path d="M188,125L246,151L246,233L188,207L188,125Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-5.5,-2)">
+        <path d="M188,217L246,243L246,325L188,299L188,217Z" style="fill:rgb(17,17,17);fill-rule:nonzero;"/>
+    </g>
+</svg>
