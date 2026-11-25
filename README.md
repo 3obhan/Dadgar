@@ -2,14 +2,9 @@
 
 <br />
 
-```text
-   ███╗   ███╗██████╗╗          ██╗
-   ████╗ ████║██╔══██╗          ██║
-   ██╔████╔██║██████╔╝          ██║
-   ██║╚██╔╝██║██╔══██╗     ██   ██║
-   ██║ ╚═╝ ██║██║  ██║     ╚█████╔╝
-   ╚═╝     ╚═╝╚═╝  ╚═╝      ╚════╝
-```
+<p align="center">
+  <img src="./assets/mrj-logo.gif" alt="Mr. J (جناب قاضی) — Judge Gavel Logo" width="160" />
+</p>
 
 <h2>Mr. J (جناب قاضی) — Rational AI Dispute Arbiter</h2>
 
@@ -20,7 +15,7 @@
 <p>
   <img src="https://img.shields.io/badge/License-All_Rights_Reserved-111111?style=for-the-badge" alt="All Rights Reserved" />
   <img src="https://img.shields.io/badge/Status-Proprietary_Software-FFC400?style=for-the-badge&labelColor=111111" alt="Proprietary Software" />
-  <img src="https://img.shields.io/badge/Languages-English_%7C_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-111111?style=for-the-badge" alt="Bilingual" />
+  <img src="https://img.shields.io/badge/Languages-English_%26_Persian-111111?style=for-the-badge" alt="Bilingual: English & Persian" />
 </p>
 
 </div>
@@ -61,4 +56,4 @@
 
 ## 📬 Contact
 
-For licensing, inquiries, or authorized access: **Sobhan.Ganji@Yahoo.Com**
+For licensing, inquiries, or authorized access: **sobhanganji@gmail.com**
