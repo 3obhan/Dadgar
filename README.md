@@ -20,7 +20,7 @@
 <p>
   <img src="https://img.shields.io/badge/License-All_Rights_Reserved-111111?style=for-the-badge" alt="All Rights Reserved" />
   <img src="https://img.shields.io/badge/Status-Proprietary_Software-FFC400?style=for-the-badge&labelColor=111111" alt="Proprietary Software" />
-  <img src="https://img.shields.io/badge/Languages-English_فارسی-111111?style=for-the-badge" alt="Bilingual" />
+  <img src="https://img.shields.io/badge/Languages-English_%7C_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-111111?style=for-the-badge" alt="Bilingual" />
 </p>
 
 </div>
